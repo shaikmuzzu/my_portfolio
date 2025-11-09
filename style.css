@@ -1,0 +1,170 @@
+/* Basic reset and fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: white;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: rgba(15, 23, 42, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #38bdf8;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Sections */
+section {
+  padding: 100px 60px;
+  min-height: 100vh;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.home h2 {
+  font-size: 2.8rem;
+  color: #38bdf8;
+}
+
+.home p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  max-width: 600px;
+}
+
+/* Button */
+.btn {
+  margin-top: 25px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #0ea5e9;
+  transform: scale(1.05);
+}
+
+/* Content sections */
+.skills, .experience, .contact {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 40px;
+  margin-top: 40px;
+}
+
+.skills h3, .experience h3, .contact h3 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+/* Skill tags */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill {
+  background-color: #38bdf8;
+  color: #0f172a;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0f172a;
+  border-top: 1px solid #1e293b;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  nav a {
+    margin: 8px;
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 80px 25px;
+  }
+
+  .home h2 {
+    font-size: 2rem;
+  }
+
+  .home p {
+    font-size: 1rem;
+  }
+}
